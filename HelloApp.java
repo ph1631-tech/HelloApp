@@ -1,7 +1,11 @@
-public class HelloApp {
+public class HelloApp{
     public static void main(String[] args) {
-        // If no argument is passed, default to "World"
-        String userName = (args.length > 0) ? args[0] : "World";
-        System.out.println("Hello " + userName + "!");
+        if (args.length == 0) {
+            System.out.println("Hello World!");
+        } else {
+            for (String name : args) {
+                System.out.println("Hello " + name + "!");
+            }
+        }
     }
 }
